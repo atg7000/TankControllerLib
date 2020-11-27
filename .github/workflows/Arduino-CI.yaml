@@ -24,7 +24,6 @@ jobs:
       - name: Install libraries
         run: |
           ./scripts/install_libraries.sh  
-          ls -al /home/runner/Arduino/libraries/Ethernet/src
 
       # Finally, run the tests
       - run: |
