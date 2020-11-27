@@ -7,9 +7,9 @@
 #include "TankControllerLib.h"
 
 unittest(test) {
-    EthernetServer_TC* server = EthernetServer_TC::instance();
-    assertEqual("EthernetServer_TC", server->className());
-    assertEqual(80, server->getPort());
+  EthernetServer_TC* server = EthernetServer_TC::instance();
+  assertEqual("EthernetServer_TC", server->className());
+  assertEqual(80, server->getPort());
 }
 
 unittest_main()

@@ -24,7 +24,8 @@ jobs:
       - name: Install libraries
         run: |
           ./scripts/install_libraries.sh  
+          ls -al /home/runner/Arduino/libraries/Ethernet/src
 
       # Finally, run the tests
       - run: |
-          bundle exec arduino_ci_remote.rb
+          bundle exec arduino_ci.rb
