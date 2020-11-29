@@ -21,7 +21,7 @@ EthernetServer_TC* EthernetServer_TC::instance() {
 EthernetServer_TC::EthernetServer_TC(uint16_t port) : EthernetServer(port) {
   begin();
   Serial.print(F("Ethernet Server is listening on port 80 of ??????"));
-  //   Need Mock board for .localIP to work
+  //   TODO: Need Mock board for .localIP to work
   //   Serial.println(Ethernet.localIP());
 }
 
@@ -33,7 +33,7 @@ void EthernetServer_TC::handleRequest() {
   // listen for incoming clients
   EthernetClient rpc_client = available();  // Raspberry Pi Client
   if (rpc_client) {
-    // NEED TO IMPLIMENT
+    // TODO: NEED TO IMPLIMENT
     // HandleRequest(rpc_client);
 
     // give the web browser time to receive the data
