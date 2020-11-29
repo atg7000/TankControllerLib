@@ -7,7 +7,11 @@
 #include <Ethernet.h>
 #endif
 
-// If running in test mode, superclass = EthernetServer_CI
+/**
+ * EthernetServer_TC provides wrapper for web server for TankController
+ *
+ * If running in test mode, superclass = EthernetServer_CI
+ */
 class EthernetServer_TC : public EthernetServer {
 public:
   // class methods
