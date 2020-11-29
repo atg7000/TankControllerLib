@@ -15,6 +15,9 @@ EthernetServer_TC* EthernetServer_TC::instance() {
 }
 
 //  instance methods
+/**
+ * Constructor: which port should we listen on?
+ */
 EthernetServer_TC::EthernetServer_TC(uint16_t port) : EthernetServer(port) {
   begin();
   Serial.print(F("Ethernet Server is listening on port 80 of ??????"));
@@ -22,6 +25,10 @@ EthernetServer_TC::EthernetServer_TC(uint16_t port) : EthernetServer(port) {
   //   Serial.println(Ethernet.localIP());
 }
 
+/**
+ * Look for request from external client and handle it.
+ * This (incomplete) code copied from HandleRequest()
+ */
 void EthernetServer_TC::handleRequest() {
   // listen for incoming clients
   EthernetClient rpc_client = available();  // Raspberry Pi Client
